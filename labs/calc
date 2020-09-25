@@ -1,24 +1,20 @@
 #!/bin/bash
 
-echo "Put the operation down below"
-
-read oper var1 var2
-
-case $oper in
+case $1 in
 	sum)
-	let res=$(($var1+$var2))
+	let res=$(($2+$3))
 	echo $res
 	;;
 	sub)
-	let res=$(($var1-$var2))
+	let res=$(($2-$3))
 	echo $res
 	;;
 	mul)
-	let res=$(($var1*$var2))
+	let res=$(($2*$3))
 	echo $res
 	;;
-	div)  	if [[ $var2 -ne 0 ]]; then
-		let res=$(($var1/$var2))
+	div)  	if [[ $3 -ne 0 ]]; then
+		let res=$(($2/$3))
 		echo $res
 		 else
 		echo "You can't divide by 0"
