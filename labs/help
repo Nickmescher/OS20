@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "1) Calc - you can sum, subtract, multiply or divide two integer arguments"
+echo "2) Search - you can make a recursive search in a directory"
+echo "3) Reverse - you can rewrite your file in reverse order to the other file"
+echo "4) Strlen - you can see how many symbols in the string"
+echo "5) Log - you can see warning and information string from X.log"
+echo "6) Exit - you can finish the programm with any code"
+echo "7) Help - you can see which comands do you have"
+echo "8) Interactive - you can turn on the interactive mode"

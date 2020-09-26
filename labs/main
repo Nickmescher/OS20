@@ -11,6 +11,21 @@ case $1 in
 	reverse)
 	./reverse $2 $3
 	;;
+	strlen)
+	./strlen $2
+	;;
+	log)
+	./log
+	;;
+	exit)
+	./exit $2
+	;;
+	help)
+	./help
+	;;
+	interactive)
+	./interactive
+	;;
 	*)
 	echo "This command doesn't exist"
 	;;
