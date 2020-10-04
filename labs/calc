@@ -1,7 +1,7 @@
 #!/bin/bash
-
+calc() {
 case $1 in
-	sum)
+	"sum")
 	let res=$(($2+$3))
 	echo $res
 	;;
@@ -24,3 +24,4 @@ case $1 in
 	echo "Something went wrong"
 	;;
 esac
+}

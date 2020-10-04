@@ -1,4 +1,39 @@
-privet
-poka
-hello (world) bye
-bye
+#!/bin/bash
+source calc
+source search
+source reverse
+source strlen
+source exit
+source help
+source log
+source interactive
+
+case "$1" in
+	"calc")
+	calc $2 $3 $4
+	;;
+	"search")
+	search $2 $3
+	;;
+	"reverse")
+	reverse $2 $3
+	;;
+	"strlen")
+	strlen $2
+	;;
+	"log")
+	log
+	;;
+	"exit")
+	exit $2
+	;;
+	"help")
+	help
+	;;
+	"interactive")
+	interactive
+	;;
+	*)
+	echo "This command doesn't exist"
+	;;
+esac

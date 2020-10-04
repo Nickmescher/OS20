@@ -1,6 +1,10 @@
 #!/bin/bash
 
+reverse () {
 if [[ -f $1 ]] || [[ -f $2 ]]
-then tac $1 > $2
+then rev $1 > n
+tac n > $2 
+rm n
 else echo "One of the files is absence"
 fi
+}

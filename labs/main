@@ -1,32 +1,48 @@
 #!/bin/bash
+source calc
+source search
+source reverse
+source strlen
+source exit
+source help
+source log
+source interactive
 
-
-case $1 in
-	calc)
-	./calc $2 $3 $4
+case "$1" in
+	"calc")
+	[[ $# -ne 4 ]] && echo "wrong amount of arguments" #NE
+	calc $2 $3 $4
 	;;
-	search)
-	./search $2 $3
+	"search")
+	[[ $# -ne 3 ]] && echo "wrong amount of argument" #NE 
+	search $2 $3
 	;;
-	reverse)
-	./reverse $2 $3
+	"reverse")
+	[[ $# -ne 3 ]] && echo "wrong amount of arguments" #NE
+	reverse $2 $3
 	;;
-	strlen)
-	./strlen $2
+	"strlen")
+	[[ $# -ne 2 ]] && echo "wrong amount of arguments" #NE 
+	strlen $2
 	;;
-	log)
-	./log
+	"log")
+	[[ $# -ne 1 ]] && echo "wrong amount of argments" #NE
+	log
 	;;
-	exit)
-	./exit $2
+	"exit")
+	[[ $# -eq 1 ]] && exit 0
+	[[ $# > 2 ]] && echo "wrong amount of arguments" #NE 
+	exit $2
 	;;
-	help)
-	./help
+	"help")
+	[[ $# -ne 1 ]] && echo "wrong amount of aruments" #NE
+	help
 	;;
-	interactive)
-	./interactive
+	"interactive")
+	[[ $# -ne 1 ]] && echo "wrong amount of arguments" #NE
+	interactive
 	;;
 	*)
-	echo "This command doesn't exist"
+	echo "This command doesn't exist" #NE
 	;;
 esac

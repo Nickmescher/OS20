@@ -1,6 +1,10 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]; then echo "Exit with code 0"
-else echo "Exit with code $1"
+exiit() {
+
+if [ $# -eq 0 ]; then exit 0
+else exit $1
 fi
 exit
+
+}

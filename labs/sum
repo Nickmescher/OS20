@@ -1,0 +1,27 @@
+}
+esac
+	;;
+	echo "Something went wrong"
+	*)
+	;;
+		fi
+		echo "You can't divide by 0"
+		 else
+		echo $res
+		let res=$(($2/$3))
+	div)  	if [[ $3 -ne 0 ]]; then
+	;;
+	echo $res
+	let res=$(($2*$3))
+	mul)
+	;;
+	echo $res
+	let res=$(($2-$3))
+	sub)
+	;;
+	echo $res
+	let res=$(($2+$3))
+	"sum")
+case $1 in
+calc() {
+#!/bin/bash
