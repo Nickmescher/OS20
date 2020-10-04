@@ -7,42 +7,43 @@ source exit
 source help
 source log
 source interactive
+source exceptions
 
 case "$1" in
 	"calc")
-	[[ $# -ne 4 ]] && echo "wrong amount of arguments" #NE
+	[[ $# -ne 4 ]] && wrongAmountArguments 
 	calc $2 $3 $4
 	;;
 	"search")
-	[[ $# -ne 3 ]] && echo "wrong amount of argument" #NE 
+	[[ $# -ne 3 ]] && wrongAmountArguments 
 	search $2 $3
 	;;
 	"reverse")
-	[[ $# -ne 3 ]] && echo "wrong amount of arguments" #NE
+	[[ $# -ne 3 ]] && wrongAmountArguments
 	reverse $2 $3
 	;;
 	"strlen")
-	[[ $# -ne 2 ]] && echo "wrong amount of arguments" #NE 
+	[[ $# -ne 2 ]] && wrongAmountArguments 
 	strlen $2
 	;;
 	"log")
-	[[ $# -ne 1 ]] && echo "wrong amount of argments" #NE
+	[[ $# -ne 1 ]] && wrongAmountArguments
 	log
 	;;
 	"exit")
 	[[ $# -eq 1 ]] && exit 0
-	[[ $# > 2 ]] && echo "wrong amount of arguments" #NE 
+	[[ $# > 2 ]] && wrongAmountArguments 
 	exit $2
 	;;
 	"help")
-	[[ $# -ne 1 ]] && echo "wrong amount of aruments" #NE
+	[[ $# -ne 1 ]] && wrongAmountArguments
 	help
 	;;
 	"interactive")
-	[[ $# -ne 1 ]] && echo "wrong amount of arguments" #NE
+	[[ $# -ne 1 ]] && wrongAmountofArguments
 	interactive
 	;;
 	*)
-	echo "This command doesn't exist" #NE
+	excp && "This command doesn't exist" #NE
 	;;
 esac

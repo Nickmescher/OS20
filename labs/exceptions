@@ -1,0 +1,16 @@
+#!bin/bash
+
+excp() {
+	echo "Error: $1" >> /dev/stderr
+	exit 0
+}
+
+wrongTypeArgument() {
+	echo "Wrong type argument: $1" >> /dev/stderr
+	exit 0
+}
+
+wrongAmountArguments() { 
+	echo "Error: wrong amount of arguments" >> /dev/stderr
+	exit 0
+}
