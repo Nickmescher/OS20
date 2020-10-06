@@ -1,46 +1,47 @@
 #!/bin/bash
+
 source calc
 source search
 source reverse
 source strlen
-source exit
-source help
+source exiit
+source hellp
 source log
 source interactive
 source exceptions
 
 case "$1" in
 	"calc")
-	[[ $# -ne 4 ]] && wrongAmountArguments 
+	[[ $# -ne 4 ]] && wrong_arguments_amount
 	calc $2 $3 $4
 	;;
 	"search")
-	[[ $# -ne 3 ]] && wrongAmountArguments 
+	[[ $# -ne 3 ]] && wrong_arguments_amount
 	search $2 $3
 	;;
 	"reverse")
-	[[ $# -ne 3 ]] && wrongAmountArguments
+	[[ $# -ne 3 ]] && wrong_arguments_amount
 	reverse $2 $3
 	;;
 	"strlen")
-	[[ $# -ne 2 ]] && wrongAmountArguments 
+	[[ $# -ne 2 ]] && wrong_arguments_amount
 	strlen $2
 	;;
 	"log")
-	[[ $# -ne 1 ]] && wrongAmountArguments
+	[[ $# -ne 1 ]] && wrong_arguments_amount
 	log
 	;;
 	"exit")
 	[[ $# -eq 1 ]] && exit 0
-	[[ $# > 2 ]] && wrongAmountArguments 
-	exit $2
+	[[ $# > 2 ]] && wrong_arguments_amount
+	exiit $2
 	;;
 	"help")
-	[[ $# -ne 1 ]] && wrongAmountArguments
-	help
+	[[ $# -ne 1 ]] && wrong_arguments_amount
+	hellp
 	;;
 	"interactive")
-	[[ $# -ne 1 ]] && wrongAmountofArguments
+	[[ $# -ne 1 ]] && wrong_arguments_amount
 	interactive
 	;;
 	*)

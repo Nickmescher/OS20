@@ -5,12 +5,12 @@ excp() {
 	exit 0
 }
 
-wrongTypeArgument() {
+wrong_type_argument() {
 	echo "Wrong type argument: $1" >> /dev/stderr
 	exit 0
 }
 
-wrongAmountArguments() { 
+wrong_arguments_amount() { 
 	echo "Error: wrong amount of arguments" >> /dev/stderr
 	exit 0
 }
