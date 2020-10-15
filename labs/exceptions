@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 excp() {
 	echo "Error: $1" >> /dev/stderr
@@ -10,7 +10,7 @@ wrong_type_argument() {
 	exit 0
 }
 
-wrong_arguments_amount() { 
+wrong_arguments_amount() {
 	echo "Error: wrong amount of arguments" >> /dev/stderr
 	exit 0
 }

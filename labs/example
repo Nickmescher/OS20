@@ -1,39 +1,50 @@
-#!/bin/bash
-source calc
-source search
-source reverse
-source strlen
-source exit
-source help
-source log
-source interactive
+case
+;;	
+"tsixe t'nseod dnammoc sihT" pcxe	
+)*	
+;;	
+evitcaretni	
+tnuoma_stnemugra_gnorw && ]] 1 en- #$ [[	
+)"evitcaretni"	
+;;	
+plleh	
+tnuoma_stnemugra_gnorw && ]] 1 en- #$ [[	
+)"pleh"	
+;;	
+2$ tiixe	
+tnuoma_stnemugra_gnorw && ]] 2 > #$ [[	
+0 tixe && ]] 1 qe- #$ [[	
+)"tixe"	
+;;	
+gol	
+tnuoma_stnemugra_gnorw && ]] 1 en- #$ [[	
+)"gol"	
+;;	
+2$ nelrts	
+tnuoma_stnemugra_gnorw && ]] 2 en- #$ [[	
+)"nelrts"	
+;;	
+3$ 2$ esrever	
+tnuoma_stnemugra_gnorw && ]] 3 en- #$ [[	
+)"esrever"	
+;;	
+3$ 2$ hcraes	
+tnuoma_stnemugra_gnorw && ]] 3 en- #$ [[	
+)"hcraes"	
+;;	
+4$ 3$ 2$ clac	
+tnuoma_stnemugra_gnorw && ]] 4 en- #$ [[	
+)"clac"	
+ni "1$" esac
 
-case "$1" in
-	"calc")
-	calc $2 $3 $4
-	;;
-	"search")
-	search $2 $3
-	;;
-	"reverse")
-	reverse $2 $3
-	;;
-	"strlen")
-	strlen $2
-	;;
-	"log")
-	log
-	;;
-	"exit")
-	exit $2
-	;;
-	"help")
-	help
-	;;
-	"interactive")
-	interactive
-	;;
-	*)
-	echo "This command doesn't exist"
-	;;
-esac
+evitcaretni ecruos
+snoitpecxe ecruos
+gol ecruos
+plleh ecruos
+tiixe ecruos
+nelrts ecruos
+esrever ecruos
+hcraes ecruos
+clac ecruos
+
+hsab/nib/!#

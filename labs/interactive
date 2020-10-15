@@ -1,0 +1,58 @@
+#!/bin/bash
+
+source calc
+source log
+source strlen
+source search
+source hellp
+source exiit
+source reverse
+
+interactive() {
+
+echo "What do you want to?" 
+echo "Enter the required key: c - calc, l - log, s - strlen, sr - search, r - reverse, h - help, e - exit"
+read key
+
+case "$key" in
+	"c")
+	echo "Enter the process: sum, sub, mul, div"
+	read cprocess
+	echo "Enter 2 digits"
+	read c1st c2nd
+	calc $cprocess $c1st $c2nd
+	;;
+	"l")
+	log
+	;;
+	"s")
+	echo "Enter a string"
+	read s1st
+	strlen $s1st
+	;;
+	"sr")
+	echo "Enter the directory"
+	read sr1st
+	echo "Enter what do you want to find"
+	read sr2nd
+	search $sr1st $sr2nd
+	;;
+	"r")
+	echo "Enter 1st file"
+	read r1st
+	echo "Enter 2nd file"
+	read r2nd
+	reverse $r1st $r2nd
+	;;
+	"h")
+	hellp
+	;;
+	"e")
+	exiit
+	;;
+	*)
+	excp "Uknown command, please try again"
+	;;
+esac
+
+}

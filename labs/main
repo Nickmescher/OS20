@@ -7,8 +7,8 @@ source strlen
 source exiit
 source hellp
 source log
-source interactive
 source exceptions
+source interactive
 
 case "$1" in
 	"calc")
@@ -45,6 +45,6 @@ case "$1" in
 	interactive
 	;;
 	*)
-	excp && "This command doesn't exist" #NE
+	excp "This command doesn't exist"
 	;;
 esac

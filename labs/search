@@ -1,7 +1,14 @@
 #!/bin/bash
 
+source exceptions
+
 search() {
+
+if [ -d $1 ]; then
 
 grep -r $2 $1 2>/dev/null
 
+
+else excp "There is no such directory"
+fi
 }

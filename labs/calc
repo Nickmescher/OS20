@@ -1,24 +1,55 @@
 #!/bin/bash
+
+source exceptions
+
+verification() {
+
+grep -E -q "^[+-]?[0-9]+$"
+
+}
+
 calc() {
+
 case $1 in
 	"sum")
+	if (echo "$2" | verification) then
+		if (echo "$3" | verification) then
 	let res=$(($2+$3))
-	echo $res
-	;;
-	sub)
-	let res=$(($2-$3))
-	echo $res
-	;;
-	mul)
-	let res=$(($2*$3))
-	echo $res
-	;;
-	div)  	if [[ $3 -ne 0 ]]; then
-		let res=$(($2/$3))
-		echo $res
-		 else
-		echo "You can't divide by 0"
+		else excp "2nd digit is incorrect"
 		fi
+	else excp "1st digit is incorrect"
+	fi
+	echo $res
+	;;
+	"sub")
+	if (echo "$2" | verification) then
+		if (echo "$3" | verification) then
+	let res=$(($2-$3))
+		else excp "2nd digit is incorrect"
+		fi
+	else excp "1st digit is incorrect"
+	fi
+	echo $res
+	;;
+	"mul")
+	if (echo "$2" | verification) then
+		if (echo "$3" | verification) then
+	let res=$(($2*$3))
+		else excp "2nd digit is incorrect"
+		fi
+	else excp "1st digit is incorrect"
+	fi
+	echo $res
+	;;
+	"div") 
+	 if (echo "$2" | verification) then
+		if ( (echo "$3" | verification) && [[ $3 -ne 0 ]] ) then
+	let res=$(($2/$3))
+		else excp "2nd digit is incorrect"
+		fi
+	else excp "1st digit is incorrect"
+	fi
+	echo $res
 	;;
 	*)
 	echo "Something went wrong"

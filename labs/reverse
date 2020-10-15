@@ -1,10 +1,15 @@
 #!/bin/bash
 
+source exceptions
+
 reverse () {
-if [[ -f $1 ]] || [[ -f $2 ]]
+if [[ -f $1 ]] && [[ -f $2 ]]
 then rev $1 > n
-tac n > $2 
+tac n > $2
 rm n
-else echo "One of the files is absence"
+else if [[ ! -r $1 ]] && [[ ! -f $1 ]] 
+	then excp "Cannot open the file or it doesn't exist"
+	else excp "Cannot write the file"
+	fi
 fi
 }
